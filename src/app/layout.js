@@ -4,36 +4,31 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import { CartProvider } from "../lib/CartContext";
 
-// 1. VIEWPORT SETTINGS (The "Native App" Feel)
+// 1. VIEWPORT (Locks the app feeling)
 export const viewport = {
-  themeColor: "#FAF8F3", // Matches your Cream background
+  themeColor: "#FAF8F3",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  userScalable: false, // 🔒 PREVENTS ZOOMING (Crucial for App feel)
+  userScalable: false, // Prevents zooming
 };
 
-// 2. METADATA (The "Passport")
+// 2. METADATA (PWA Setup)
 export const metadata = {
-  title: "Schephino's Kitchen - Premium Nigerian Cuisine",
-  description: "Experience authentic Nigerian flavors elevated to perfection. Premium dishes crafted by master chefs.",
-  manifest: "/manifest.json", // <-- Links to the file we made earlier
+  title: "Schephino's Kitchen",
+  description: "Premium Nigerian Cuisine in the UK",
+  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Schephino's",
-  },
-  icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[var(--cream-primary)] text-[var(--text-dark)] pb-20 lg:pb-0 overflow-x-hidden selection:bg-[var(--green-primary)] selection:text-white">
+      <body className="bg-[var(--cream-primary)] text-[var(--text-dark)] pb-20 lg:pb-0">
         <CartProvider>
           <Header />
           <main className="min-h-screen w-full">
