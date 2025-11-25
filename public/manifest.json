@@ -1,0 +1,17 @@
+{
+  "name": "Schephino's Kitchen",
+  "short_name": "Schephino's",
+  "description": "Premium Nigerian Cuisine in the UK",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F3",
+  "theme_color": "#FAF8F3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
